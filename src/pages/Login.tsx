@@ -55,6 +55,17 @@ const Login = () => {
             <Button type="submit" className="w-full" disabled={loading}>
               {loading ? "Giriş yapılıyor..." : "Giriş Yap"}
             </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full"
+              onClick={() => {
+                login({ id: 1, username: "demo_user", token: "demo-token-123" });
+                navigate("/");
+              }}
+            >
+              Demo Giriş (Backend'siz)
+            </Button>
           </form>
           <p className="mt-4 text-center text-sm text-muted-foreground">
             Hesabın yok mu?{" "}
